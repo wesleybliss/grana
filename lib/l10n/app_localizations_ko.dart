@@ -212,7 +212,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get noInternetTitle => '인터넷 연결 없음';
 
   @override
-  String get noInternetMessage => 'Cnvrt가 연결할 수 없습니다.\\n인터넷 연결을 확인하세요.';
+  String get noInternetMessage => 'Grana가 연결할 수 없습니다.\\n인터넷 연결을 확인하세요.';
 
   @override
   String get tryAgain => '다시 시도';

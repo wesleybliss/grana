@@ -5,7 +5,7 @@ import 'package:avatars/avatars.dart';
 import 'package:crypto/crypto.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:cnvrt/utils/logger.dart';
+import 'package:grana/utils/logger.dart';
 
 void todo(String message) {
   throw Exception('@todo $message');

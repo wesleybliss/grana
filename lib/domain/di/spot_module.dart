@@ -1,11 +1,11 @@
-import 'package:cnvrt/db/repos/currencies_repo.dart';
-import 'package:cnvrt/domain/io/i_settings.dart';
-import 'package:cnvrt/domain/io/net/dio_client.dart';
-import 'package:cnvrt/domain/io/net/i_dio_client.dart';
-import 'package:cnvrt/domain/io/repos/i_currencies_repo.dart';
-import 'package:cnvrt/domain/io/services/currencies_service.dart';
-import 'package:cnvrt/domain/io/services/i_currencies_service.dart';
-import 'package:cnvrt/io/settings.dart';
+import 'package:grana/db/repos/currencies_repo.dart';
+import 'package:grana/domain/io/i_settings.dart';
+import 'package:grana/domain/io/net/dio_client.dart';
+import 'package:grana/domain/io/net/i_dio_client.dart';
+import 'package:grana/domain/io/repos/i_currencies_repo.dart';
+import 'package:grana/domain/io/services/currencies_service.dart';
+import 'package:grana/domain/io/services/i_currencies_service.dart';
+import 'package:grana/io/settings.dart';
 import 'package:dio/dio.dart';
 import 'package:spot_di/spot_di.dart';
 

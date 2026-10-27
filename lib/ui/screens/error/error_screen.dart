@@ -1,7 +1,7 @@
-import 'package:cnvrt/utils/crashlytics_utils.dart';
-import 'package:cnvrt/utils/logger.dart';
+import 'package:grana/utils/crashlytics_utils.dart';
+import 'package:grana/utils/logger.dart';
 import 'package:flutter/material.dart';
-import 'package:cnvrt/l10n/app_localizations.dart';
+import 'package:grana/l10n/app_localizations.dart';
 
 class ErrorScreen extends StatefulWidget {
   const ErrorScreen({super.key, this.error, this.stackTrace, this.onRetry});

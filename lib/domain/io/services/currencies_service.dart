@@ -1,9 +1,9 @@
-import 'package:cnvrt/domain/io/net/dio_client.dart';
-import 'package:cnvrt/domain/io/services/i_currencies_service.dart';
-import 'package:cnvrt/domain/models/currency_response.dart';
-import 'package:cnvrt/utils/crashlytics_utils.dart';
-import 'package:cnvrt/utils/logger.dart';
-import 'package:cnvrt/utils/network_utils.dart';
+import 'package:grana/domain/io/net/dio_client.dart';
+import 'package:grana/domain/io/services/i_currencies_service.dart';
+import 'package:grana/domain/models/currency_response.dart';
+import 'package:grana/utils/crashlytics_utils.dart';
+import 'package:grana/utils/logger.dart';
+import 'package:grana/utils/network_utils.dart';
 
 class CurrenciesService implements ICurrenciesService {
   CurrenciesService(this.dio);

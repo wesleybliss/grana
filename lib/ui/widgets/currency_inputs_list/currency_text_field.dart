@@ -1,8 +1,8 @@
-import 'package:cnvrt/db/database.dart';
-import 'package:cnvrt/domain/di/providers/settings/settings_provider.dart';
-import 'package:cnvrt/theme.dart';
-import 'package:cnvrt/ui/widgets/country_flag.dart';
-import 'package:cnvrt/utils/currency_flags.dart';
+import 'package:grana/db/database.dart';
+import 'package:grana/domain/di/providers/settings/settings_provider.dart';
+import 'package:grana/theme.dart';
+import 'package:grana/ui/widgets/country_flag.dart';
+import 'package:grana/utils/currency_flags.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

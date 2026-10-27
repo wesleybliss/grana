@@ -1,10 +1,10 @@
-# cnvrt
+# grana
 
 A fast, privacy-friendly converter for currencies and common units with full offline support.
 
-[![Flutter CI/CD](https://github.com/wesleybliss/cnvrt/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/wesleybliss/cnvrt/actions/workflows/ci-cd.yml)
+[![Flutter CI/CD](https://github.com/wesleybliss/grana/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/wesleybliss/grana/actions/workflows/ci-cd.yml)
 
-[https://wesleybliss.github.io/cnvrt](https://wesleybliss.github.io/cnvrt)
+[https://wesleybliss.github.io/grana](https://wesleybliss.github.io/grana)
 
 ## Table of Contents
 
@@ -24,7 +24,7 @@ A fast, privacy-friendly converter for currencies and common units with full off
 
 ## About
 
-cnvrt is a Flutter-based conversion application designed for speed, privacy, and offline resilience. It provides near real-time currency exchange rates with local caching for offline use, along with common unit conversions. The app follows clean architecture principles with a domain/io/ui separation pattern and uses Riverpod for state management.
+grana is a Flutter-based conversion application designed for speed, privacy, and offline resilience. It provides near real-time currency exchange rates with local caching for offline use, along with common unit conversions. The app follows clean architecture principles with a domain/io/ui separation pattern and uses Riverpod for state management.
 
 Key highlights:
 - 🌍 **Multi-currency support** with real-time exchange rates
@@ -172,7 +172,7 @@ The project follows strict conventions documented in [AGENTS.md](AGENTS.md):
 ## Project Structure
 
 ```
-cnvrt/
+grana/
 ├── lib/
 │   ├── domain/              # Business logic and models
 │   │   ├── constants/       # App-wide constants (keys, strings, routing)
@@ -225,8 +225,8 @@ cnvrt/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/wesleybliss/cnvrt.git
-   cd cnvrt
+   git clone https://github.com/wesleybliss/grana.git
+   cd grana
    ```
 
 2. **Verify Flutter installation**
@@ -540,7 +540,7 @@ Contributions are welcome! Please follow these guidelines:
 
 ## License
 
-CNVRT is licensed under **Apache 2.0 with Commons Clause**.
+Grana is licensed under **Apache 2.0 with Commons Clause**.
 
 This means:
 - ✅ You can use, modify, and distribute the source code
@@ -549,4 +549,4 @@ This means:
 
 See the [LICENSE](LICENSE) file for full details.
 
-**Questions or Issues?** Open an issue on [GitHub](https://github.com/wesleybliss/cnvrt/issues)
+**Questions or Issues?** Open an issue on [GitHub](https://github.com/wesleybliss/grana/issues)

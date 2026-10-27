@@ -1,18 +1,18 @@
-import 'package:cnvrt/config/application.dart';
-import 'package:cnvrt/config/flavor.dart';
-import 'package:cnvrt/config/routing/routes.dart';
-import 'package:cnvrt/domain/di/providers/currencies/currencies_provider.dart';
-import 'package:cnvrt/domain/di/providers/settings/settings_provider.dart';
-import 'package:cnvrt/domain/io/repos/i_currencies_repo.dart';
-import 'package:cnvrt/io/settings.dart';
-import 'package:cnvrt/utils/logger.dart';
+import 'package:grana/config/application.dart';
+import 'package:grana/config/flavor.dart';
+import 'package:grana/config/routing/routes.dart';
+import 'package:grana/domain/di/providers/currencies/currencies_provider.dart';
+import 'package:grana/domain/di/providers/settings/settings_provider.dart';
+import 'package:grana/domain/io/repos/i_currencies_repo.dart';
+import 'package:grana/io/settings.dart';
+import 'package:grana/utils/logger.dart';
 import 'package:collection/collection.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart'
     if (dart.library.js) '../../../utils/firebase_stub.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:spot_di/spot_di.dart';
-import 'package:cnvrt/l10n/app_localizations.dart';
+import 'package:grana/l10n/app_localizations.dart';
 
 class DebugScreen extends ConsumerStatefulWidget {
   const DebugScreen({super.key});

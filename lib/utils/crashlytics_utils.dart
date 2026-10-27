@@ -1,6 +1,6 @@
-import 'package:cnvrt/config/flavor.dart';
-import 'package:cnvrt/utils/logger.dart';
-import 'package:cnvrt/utils/network_utils.dart';
+import 'package:grana/config/flavor.dart';
+import 'package:grana/utils/logger.dart';
+import 'package:grana/utils/network_utils.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart'
     if (dart.library.js) 'firebase_stub.dart';
 

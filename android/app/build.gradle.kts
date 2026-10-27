@@ -26,7 +26,7 @@ if (localPropertiesFile.exists()) {
 
 android {
 
-    namespace = "com.gammagamma.cnvrt"
+    namespace = "com.gammagamma.grana"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion // "27.0.12077973"
 
@@ -42,7 +42,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.gammagamma.cnvrt"
+        applicationId = "com.gammagamma.grana"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
@@ -84,7 +84,7 @@ android {
             signingConfig = signingConfigs.getByName("debug")
             applicationIdSuffix = ".debug"
             // Aug 2026 removed due to new AGP
-            // resValue("string", "app_name", "CNVRT-D")
+            // resValue("string", "app_name", "Grana-D")
         }
         release {
             // TODO: Add your own signing config for the release build.
@@ -95,7 +95,7 @@ android {
                 signingConfigs.getByName("debug")
             }
             // Aug 2026 removed due to new AGP
-            // resValue("string", "app_name", "CNVRT")
+            // resValue("string", "app_name", "Grana")
         }
     }
     

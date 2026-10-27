@@ -2,7 +2,7 @@
 
 ## Overview
 
-CNVRT supports building FOSS (Free and Open Source Software) variants that exclude proprietary libraries. This makes the app suitable for distribution through F-Droid and other FOSS app stores.
+Grana supports building FOSS (Free and Open Source Software) variants that exclude proprietary libraries. This makes the app suitable for distribution through F-Droid and other FOSS app stores.
 
 ## Build Flavors
 

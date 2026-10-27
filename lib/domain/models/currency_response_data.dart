@@ -1,4 +1,4 @@
-import 'package:cnvrt/db/database.dart';
+import 'package:grana/db/database.dart';
 import 'package:drift/drift.dart' as drift;
 
 class CurrencyResponseData {

@@ -1,6 +1,6 @@
-import 'package:cnvrt/db/database.dart';
-import 'package:cnvrt/io/settings.dart';
-import 'package:cnvrt/utils/logger.dart';
+import 'package:grana/db/database.dart';
+import 'package:grana/io/settings.dart';
+import 'package:grana/utils/logger.dart';
 
 List<String> inflatedCurrencies = [
   "COP",

@@ -1,7 +1,7 @@
-import 'package:cnvrt/domain/di/providers/currencies/currencies_provider.dart';
-import 'package:cnvrt/l10n/app_localizations.dart';
-import 'package:cnvrt/ui/widgets/currencies_list.dart';
-import 'package:cnvrt/utils/logger.dart';
+import 'package:grana/domain/di/providers/currencies/currencies_provider.dart';
+import 'package:grana/l10n/app_localizations.dart';
+import 'package:grana/ui/widgets/currencies_list.dart';
+import 'package:grana/utils/logger.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

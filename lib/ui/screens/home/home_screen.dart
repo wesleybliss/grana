@@ -1,16 +1,16 @@
 import 'dart:async';
 
-import 'package:cnvrt/domain/di/providers/currencies/currencies_provider.dart';
-import 'package:cnvrt/domain/di/providers/notifications/notification_provider.dart';
-import 'package:cnvrt/domain/extensions/extensions.dart';
-import 'package:cnvrt/ui/screens/home/home_error.dart';
-import 'package:cnvrt/ui/screens/home/home_loading.dart';
-import 'package:cnvrt/ui/screens/home/home_ready.dart';
-import 'package:cnvrt/ui/widgets/currency_inputs_list/currency_inputs_list_vm.dart';
-import 'package:cnvrt/utils/utils.dart';
+import 'package:grana/domain/di/providers/currencies/currencies_provider.dart';
+import 'package:grana/domain/di/providers/notifications/notification_provider.dart';
+import 'package:grana/domain/extensions/extensions.dart';
+import 'package:grana/ui/screens/home/home_error.dart';
+import 'package:grana/ui/screens/home/home_loading.dart';
+import 'package:grana/ui/screens/home/home_ready.dart';
+import 'package:grana/ui/widgets/currency_inputs_list/currency_inputs_list_vm.dart';
+import 'package:grana/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:cnvrt/l10n/app_localizations.dart';
+import 'package:grana/l10n/app_localizations.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});

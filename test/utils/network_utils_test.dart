@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:cnvrt/utils/network_utils.dart';
+import 'package:grana/utils/network_utils.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
 

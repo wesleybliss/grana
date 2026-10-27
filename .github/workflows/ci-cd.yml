@@ -71,26 +71,26 @@ jobs:
           fi
           
           # Rename APKs
-          mv "$STD_APK" "cnvrt-${{ env.BRANCH }}.apk"
-          mv "$FOSS_APK" "cnvrt-${{ env.BRANCH }}-foss.apk"
+          mv "$STD_APK" "grana-${{ env.BRANCH }}.apk"
+          mv "$FOSS_APK" "grana-${{ env.BRANCH }}-foss.apk"
           
           # Generate SHA1 checksums
-          sha1sum "cnvrt-${{ env.BRANCH }}.apk" > "cnvrt-${{ env.BRANCH }}.apk.sha1"
-          sha1sum "cnvrt-${{ env.BRANCH }}-foss.apk" > "cnvrt-${{ env.BRANCH }}-foss.apk.sha1"
+          sha1sum "grana-${{ env.BRANCH }}.apk" > "grana-${{ env.BRANCH }}.apk.sha1"
+          sha1sum "grana-${{ env.BRANCH }}-foss.apk" > "grana-${{ env.BRANCH }}-foss.apk.sha1"
           
           # List generated files
-          ls -lh cnvrt-*.apk*
+          ls -lh grana-*.apk*
 
       # Upload both flavor APKs as artifacts
       - name: Upload APK artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: cnvrt-apks-${{ env.BRANCH }}
+          name: grana-apks-${{ env.BRANCH }}
           path: |
-            cnvrt-${{ env.BRANCH }}.apk
-            cnvrt-${{ env.BRANCH }}.apk.sha1
-            cnvrt-${{ env.BRANCH }}-foss.apk
-            cnvrt-${{ env.BRANCH }}-foss.apk.sha1
+            grana-${{ env.BRANCH }}.apk
+            grana-${{ env.BRANCH }}.apk.sha1
+            grana-${{ env.BRANCH }}-foss.apk
+            grana-${{ env.BRANCH }}-foss.apk.sha1
 
       # Prepare release tag (master-only)
       - name: Prepare release tag
@@ -100,7 +100,7 @@ jobs:
           # Generate date-based tag (UTC)
           TAG="v$(date -u +'%Y.%m.%d')"
           echo "RELEASE_TAG=$TAG" >> "$GITHUB_ENV"
-          echo "RELEASE_NAME=CNVRT $TAG" >> "$GITHUB_ENV"
+          echo "RELEASE_NAME=Grana $TAG" >> "$GITHUB_ENV"
           echo "Generated release tag: $TAG"
 
       # Create GitHub Release with both flavors (master-only)
@@ -115,10 +115,10 @@ jobs:
           make_latest: true
           fail_on_unmatched_files: true
           files: |
-            cnvrt-${{ env.BRANCH }}.apk
-            cnvrt-${{ env.BRANCH }}.apk.sha1
-            cnvrt-${{ env.BRANCH }}-foss.apk
-            cnvrt-${{ env.BRANCH }}-foss.apk.sha1
+            grana-${{ env.BRANCH }}.apk
+            grana-${{ env.BRANCH }}.apk.sha1
+            grana-${{ env.BRANCH }}-foss.apk
+            grana-${{ env.BRANCH }}-foss.apk.sha1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

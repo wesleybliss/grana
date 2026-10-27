@@ -1,7 +1,7 @@
-import 'package:cnvrt/domain/di/providers/currencies/currencies_provider.dart';
-import 'package:cnvrt/ui/screens/error/error_screen.dart';
-import 'package:cnvrt/ui/screens/home/widgets/no_internet_error.dart';
-import 'package:cnvrt/utils/network_utils.dart';
+import 'package:grana/domain/di/providers/currencies/currencies_provider.dart';
+import 'package:grana/ui/screens/error/error_screen.dart';
+import 'package:grana/ui/screens/home/widgets/no_internet_error.dart';
+import 'package:grana/utils/network_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

@@ -1,6 +1,6 @@
 class ConstantsStrings {
   // final appName = 'Simple Currency';
-  final appName = 'CNVRT';
+  final appName = 'Grana';
   final appSlug = 'simple-currency';
   final useLocalApiServer = false;
 

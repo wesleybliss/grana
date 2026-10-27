@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-import 'package:cnvrt/utils/logger.dart';
+import 'package:grana/utils/logger.dart';
 
 abstract class IDioClient {
   @protected

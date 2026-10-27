@@ -5,7 +5,7 @@
 set -e  # Exit on error
 
 echo "========================================="
-echo "Building CNVRT FOSS variant"
+echo "Building Grana FOSS variant"
 echo "========================================="
 echo ""
 

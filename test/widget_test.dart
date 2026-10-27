@@ -5,7 +5,7 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
-import 'package:cnvrt/app.dart';
+import 'package:grana/app.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -14,8 +14,8 @@ void main() {
     // Build our app and trigger a frame.
     await tester.pumpWidget(ProviderScope(child: SimpleCurrencyApp()));
 
-    // Verify the title in the app bar says "CNVRT"
-    // expect(find.text('CNVRT'), findsOneWidget);
+    // Verify the title in the app bar says "Grana"
+    // expect(find.text('Grana'), findsOneWidget);
 
     // Verify that our counter starts at 0.
     /*expect(find.text('0'), findsOneWidget);

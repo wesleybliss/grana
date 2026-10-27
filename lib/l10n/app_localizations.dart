@@ -509,7 +509,7 @@ abstract class AppLocalizations {
   /// No description provided for @noInternetMessage.
   ///
   /// In en, this message translates to:
-  /// **'Cnvrt could not connect.\nCheck your internet connection.'**
+  /// **'Grana could not connect.\nCheck your internet connection.'**
   String get noInternetMessage;
 
   /// No description provided for @tryAgain.

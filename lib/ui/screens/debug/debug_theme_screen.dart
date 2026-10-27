@@ -1,5 +1,5 @@
-import 'package:cnvrt/utils/logger.dart';
-import 'package:cnvrt/utils/pair.dart';
+import 'package:grana/utils/logger.dart';
+import 'package:grana/utils/pair.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

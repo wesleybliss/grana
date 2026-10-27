@@ -1,13 +1,13 @@
-import 'package:cnvrt/domain/constants/constants.dart';
-import 'package:cnvrt/domain/di/providers/currencies/currencies_provider.dart';
-import 'package:cnvrt/domain/di/providers/currencies/currency_values_provider.dart';
-import 'package:cnvrt/domain/di/providers/currencies/sorted_currencies_provider.dart';
-import 'package:cnvrt/domain/di/providers/settings/settings_provider.dart';
-import 'package:cnvrt/ui/widgets/currency_inputs_list/currency_inputs_list_row.dart';
+import 'package:grana/domain/constants/constants.dart';
+import 'package:grana/domain/di/providers/currencies/currencies_provider.dart';
+import 'package:grana/domain/di/providers/currencies/currency_values_provider.dart';
+import 'package:grana/domain/di/providers/currencies/sorted_currencies_provider.dart';
+import 'package:grana/domain/di/providers/settings/settings_provider.dart';
+import 'package:grana/ui/widgets/currency_inputs_list/currency_inputs_list_row.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:cnvrt/ui/widgets/currency_inputs_list/currency_inputs_list_vm.dart'; // Import your new ViewModel
-import 'package:cnvrt/l10n/app_localizations.dart';
+import 'package:grana/ui/widgets/currency_inputs_list/currency_inputs_list_vm.dart'; // Import your new ViewModel
+import 'package:grana/l10n/app_localizations.dart';
 
 class CurrenciesInputsList extends ConsumerWidget {
   // Since the data comes from providers, the constructor might not need

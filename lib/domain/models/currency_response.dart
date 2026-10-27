@@ -1,4 +1,4 @@
-import 'package:cnvrt/domain/models/currency_response_data.dart';
+import 'package:grana/domain/models/currency_response_data.dart';
 
 class CurrencyResponse {
   final String source;

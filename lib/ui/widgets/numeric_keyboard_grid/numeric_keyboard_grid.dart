@@ -1,9 +1,9 @@
-import 'package:cnvrt/domain/di/providers/currencies/currencies_provider.dart';
-import 'package:cnvrt/domain/di/providers/currencies/currency_input_mode_provider.dart';
-import 'package:cnvrt/domain/di/providers/currencies/currency_values_provider.dart';
-import 'package:cnvrt/domain/di/providers/settings/settings_provider.dart';
-import 'package:cnvrt/ui/widgets/numeric_keyboard_grid/numeric_keyboard_grid_button.dart';
-import 'package:cnvrt/utils/logger.dart';
+import 'package:grana/domain/di/providers/currencies/currencies_provider.dart';
+import 'package:grana/domain/di/providers/currencies/currency_input_mode_provider.dart';
+import 'package:grana/domain/di/providers/currencies/currency_values_provider.dart';
+import 'package:grana/domain/di/providers/settings/settings_provider.dart';
+import 'package:grana/ui/widgets/numeric_keyboard_grid/numeric_keyboard_grid_button.dart';
+import 'package:grana/utils/logger.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

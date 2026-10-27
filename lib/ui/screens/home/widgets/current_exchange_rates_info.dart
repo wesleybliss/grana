@@ -1,6 +1,6 @@
-import 'package:cnvrt/db/database.dart';
-import 'package:cnvrt/l10n/app_localizations.dart';
-import 'package:cnvrt/utils/conditionally_visible.dart';
+import 'package:grana/db/database.dart';
+import 'package:grana/l10n/app_localizations.dart';
+import 'package:grana/utils/conditionally_visible.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
