@@ -1,7 +1,7 @@
-import 'package:cnvrt/db/database.dart';
-import 'package:cnvrt/domain/constants/constants.dart';
-import 'package:cnvrt/domain/extensions/extensions.dart';
-import 'package:cnvrt/ui/widgets/currency_inputs_list/currency_text_field.dart';
+import 'package:grana/db/database.dart';
+import 'package:grana/domain/constants/constants.dart';
+import 'package:grana/domain/extensions/extensions.dart';
+import 'package:grana/ui/widgets/currency_inputs_list/currency_text_field.dart';
 import 'package:flutter/material.dart';
 
 class CurrencyInputsListRow extends StatelessWidget {

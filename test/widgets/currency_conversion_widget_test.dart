@@ -1,8 +1,8 @@
-import 'package:cnvrt/db/database.dart';
-import 'package:cnvrt/domain/di/providers/settings/settings_provider.dart';
-import 'package:cnvrt/domain/io/i_settings.dart';
-import 'package:cnvrt/io/settings.dart';
-import 'package:cnvrt/ui/widgets/currency_inputs_list/currency_text_field.dart';
+import 'package:grana/db/database.dart';
+import 'package:grana/domain/di/providers/settings/settings_provider.dart';
+import 'package:grana/domain/io/i_settings.dart';
+import 'package:grana/io/settings.dart';
+import 'package:grana/ui/widgets/currency_inputs_list/currency_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

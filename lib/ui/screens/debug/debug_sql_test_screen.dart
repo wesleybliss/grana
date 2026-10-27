@@ -1,6 +1,6 @@
-import 'package:cnvrt/db/database.dart' as db;
-import 'package:cnvrt/domain/io/repos/i_currencies_repo.dart';
-import 'package:cnvrt/utils/logger.dart';
+import 'package:grana/db/database.dart' as db;
+import 'package:grana/domain/io/repos/i_currencies_repo.dart';
+import 'package:grana/utils/logger.dart';
 import 'package:drift/drift.dart' as drift;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

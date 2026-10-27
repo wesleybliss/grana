@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.gammagamma" "\0"
-            VALUE "FileDescription", "cnvrt" "\0"
+            VALUE "FileDescription", "grana" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "cnvrt" "\0"
+            VALUE "InternalName", "grana" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2025 com.gammagamma. All rights reserved." "\0"
-            VALUE "OriginalFilename", "cnvrt.exe" "\0"
-            VALUE "ProductName", "cnvrt" "\0"
+            VALUE "OriginalFilename", "grana.exe" "\0"
+            VALUE "ProductName", "grana" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

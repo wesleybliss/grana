@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:cnvrt/domain/constants/constants.dart';
-import 'package:cnvrt/domain/io/net/i_dio_client.dart';
-import 'package:cnvrt/utils/logger.dart';
+import 'package:grana/domain/constants/constants.dart';
+import 'package:grana/domain/io/net/i_dio_client.dart';
+import 'package:grana/utils/logger.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class DioClient implements IDioClient {

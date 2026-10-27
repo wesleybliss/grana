@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:cnvrt/l10n/app_localizations.dart';
+import 'package:grana/l10n/app_localizations.dart';
 
 const defaultDuration = Duration(seconds: 3);
 

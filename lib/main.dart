@@ -1,5 +1,5 @@
-import 'package:cnvrt/config/application.dart';
-import 'package:cnvrt/utils/firebase.dart';
+import 'package:grana/config/application.dart';
+import 'package:grana/utils/firebase.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

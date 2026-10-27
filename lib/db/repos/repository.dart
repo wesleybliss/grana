@@ -1,4 +1,4 @@
-import 'package:cnvrt/config/application.dart';
+import 'package:grana/config/application.dart';
 import 'package:drift/drift.dart';
 
 abstract class Repository<T extends DataClass, C extends Insertable<T>> {

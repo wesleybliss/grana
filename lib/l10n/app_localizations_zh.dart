@@ -211,7 +211,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get noInternetTitle => '无网络连接';
 
   @override
-  String get noInternetMessage => 'Cnvrt无法连接。\\n请检查您的网络连接。';
+  String get noInternetMessage => 'Grana无法连接。\\n请检查您的网络连接。';
 
   @override
   String get tryAgain => '重试';

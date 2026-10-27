@@ -4,7 +4,7 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 
 ## Project Overview
 
-CNVRT is a Flutter mobile application for currency and unit conversions. The app:
+Grana is a Flutter mobile application for currency and unit conversions. The app:
 - Fetches real-time exchange rates from an external API (localhost:3002 in dev, Vercel in production)
 - Supports offline mode by caching exchange rates locally in a Drift database
 - Provides unit conversions (temperature, distance, speed, area, weight, volume)

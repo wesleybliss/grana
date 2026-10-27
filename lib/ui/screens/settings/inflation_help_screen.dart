@@ -1,4 +1,4 @@
-import 'package:cnvrt/l10n/app_localizations.dart';
+import 'package:grana/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 class InflationHelpScreen extends StatelessWidget {

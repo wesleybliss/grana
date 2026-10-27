@@ -1,6 +1,6 @@
-import 'package:cnvrt/db/database.dart';
-import 'package:cnvrt/io/settings.dart';
-import 'package:cnvrt/utils/currency_utils.dart';
+import 'package:grana/db/database.dart';
+import 'package:grana/io/settings.dart';
+import 'package:grana/utils/currency_utils.dart';
 import 'package:flutter_test/flutter_test.dart';
 import '../helpers/spot_test_helper.dart';
 

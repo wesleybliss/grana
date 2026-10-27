@@ -1,4 +1,4 @@
-# CNVRT Project Guidelines
+# Grana Project Guidelines
 
 ## Core Features
 

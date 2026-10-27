@@ -1,6 +1,6 @@
-import 'package:cnvrt/domain/di/providers/settings/settings_provider.dart';
-import 'package:cnvrt/l10n/app_localizations.dart';
-import 'package:cnvrt/utils/language_names.dart';
+import 'package:grana/domain/di/providers/settings/settings_provider.dart';
+import 'package:grana/l10n/app_localizations.dart';
+import 'package:grana/utils/language_names.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

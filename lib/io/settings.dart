@@ -1,5 +1,5 @@
-import 'package:cnvrt/domain/constants/constants.dart';
-import 'package:cnvrt/domain/io/i_settings.dart';
+import 'package:grana/domain/constants/constants.dart';
+import 'package:grana/domain/io/i_settings.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Settings implements ISettings {

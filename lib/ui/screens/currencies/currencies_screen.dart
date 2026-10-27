@@ -1,7 +1,7 @@
-import 'package:cnvrt/domain/di/providers/currencies/currencies_provider.dart';
-import 'package:cnvrt/ui/screens/currencies/currencies_error.dart';
-import 'package:cnvrt/ui/screens/currencies/currencies_loading.dart';
-import 'package:cnvrt/ui/screens/currencies/currencies_ready.dart';
+import 'package:grana/domain/di/providers/currencies/currencies_provider.dart';
+import 'package:grana/ui/screens/currencies/currencies_error.dart';
+import 'package:grana/ui/screens/currencies/currencies_loading.dart';
+import 'package:grana/ui/screens/currencies/currencies_ready.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

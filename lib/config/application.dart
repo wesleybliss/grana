@@ -1,8 +1,8 @@
-import 'package:cnvrt/db/database.dart';
-import 'package:cnvrt/domain/constants/constants.dart';
+import 'package:grana/db/database.dart';
+import 'package:grana/domain/constants/constants.dart';
 import 'package:spot_di/spot_di.dart';
-import 'package:cnvrt/domain/di/spot_module.dart';
-import 'package:cnvrt/utils/logger.dart';
+import 'package:grana/domain/di/spot_module.dart';
+import 'package:grana/utils/logger.dart';
 import 'package:fluro/fluro.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';

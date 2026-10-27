@@ -231,7 +231,7 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get noInternetMessage =>
-      'Cnvrt non è riuscito a connettersi.\\nControlla la tua connessione internet.';
+      'Grana non è riuscito a connettersi.\\nControlla la tua connessione internet.';
 
   @override
   String get tryAgain => 'Riprova';

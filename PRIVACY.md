@@ -1,8 +1,8 @@
-# Privacy Policy for CNVRT
+# Privacy Policy for Grana
 
 **Last updated:** November 4, 2025
 
-This Privacy Policy describes how your information is collected, used, and shared when you use the CNVRT application (the "App").
+This Privacy Policy describes how your information is collected, used, and shared when you use the Grana application (the "App").
 
 ## Information We Collect
 

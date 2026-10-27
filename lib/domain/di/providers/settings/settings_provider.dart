@@ -1,4 +1,4 @@
-import 'package:cnvrt/io/settings.dart';
+import 'package:grana/io/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';

@@ -1,9 +1,9 @@
-import 'package:cnvrt/db/database.dart';
-import 'package:cnvrt/domain/di/providers/currencies/currencies_provider.dart';
-import 'package:cnvrt/domain/di/providers/currencies/sorted_currencies_provider.dart';
-import 'package:cnvrt/domain/di/providers/settings/settings_provider.dart';
-import 'package:cnvrt/utils/currency_utils.dart';
-import 'package:cnvrt/utils/logger.dart';
+import 'package:grana/db/database.dart';
+import 'package:grana/domain/di/providers/currencies/currencies_provider.dart';
+import 'package:grana/domain/di/providers/currencies/sorted_currencies_provider.dart';
+import 'package:grana/domain/di/providers/settings/settings_provider.dart';
+import 'package:grana/utils/currency_utils.dart';
+import 'package:grana/utils/logger.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class CurrencyValuesNotifier extends StateNotifier<Map<String, double>> {
