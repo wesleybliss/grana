@@ -128,7 +128,7 @@ jobs:
       - name: Prepare branch name
         run: |
           BRANCH="$GITHUB_REF_NAME"
-          SAFE=$(echo "$BRANCH" | tr '/ ' '-' | tr -cd '[:alnum.]._-')
+          SAFE=$(echo "$BRANCH" | tr '/ ' '-' | tr -cd '[:alnum:]._-')
           echo "BRANCH=$SAFE" >> $GITHUB_ENV
           echo "Using branch name: $SAFE"
 
