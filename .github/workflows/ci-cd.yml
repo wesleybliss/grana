@@ -5,43 +5,117 @@ permissions:
 
 on:
   push:
-    branches: [master, develop]  # Add 'develop' here
+    branches: [master, develop]
+  workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: subosito/flutter-action@v2
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # 1. Bump build number (versionCode) in pubspec.yaml
+      - name: Bump versionCode in pubspec.yaml
+        run: |
+          python3 -c "
+          import os, re, sys
+
+          with open('pubspec.yaml', 'r') as f:
+              content = f.read()
+
+          match = re.search(r'^version:\s*([^\+\s]+)\+(\d+)', content, re.MULTILINE)
+          if not match:
+              print('Error: version (x.y.z+code) not found in pubspec.yaml', file=sys.stderr)
+              sys.exit(1)
+
+          version_name = match.group(1)
+          current_code = int(match.group(2))
+          new_code = current_code + 1
+
+          content = re.sub(
+              r'^version:\s*[^\+\s]+\+\d+',
+              f'version: {version_name}+{new_code}',
+              content,
+              count=1,
+              flags=re.MULTILINE,
+          )
+
+          with open('pubspec.yaml', 'w') as f:
+              f.write(content)
+
+          env_file = os.getenv('GITHUB_ENV')
+          if env_file:
+              with open(env_file, 'a') as ef:
+                  ef.write(f'NEW_VERSION_CODE={new_code}\n')
+                  ef.write(f'VERSION_NAME={version_name}\n')
+
+          print(f'Bumped versionCode from {current_code} to {new_code} (versionName: {version_name})')
+          "
+
+      # 2. Commit and push bumped version with [skip ci]
+      - name: Commit and push version bump
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add pubspec.yaml
+          git commit -m "chore(release): bump versionCode to ${{ env.NEW_VERSION_CODE }} [skip ci]"
+          git push origin ${{ github.ref_name }}
+
+      # 3. Setup Java & Flutter environment
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+          cache: 'gradle'
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
+          cache: true
 
-      # Cache dependencies before fetching them
-      - uses: actions/cache@v3
-        with:
-          path: ~/.pub-cache
-          key: ${{ runner.os }}-pub-${{ hashFiles('**/pubspec.lock') }}
       - run: flutter pub get
       - run: flutter test
 
-      # Set up signing
-      - name: Decode Keystore
+      # 4. Set up signing
+      - name: Setup Release Signing
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
         run: |
-          mkdir keystore
-          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > keystore/release-key.jks
-          ls -alh keystore
-      - name: Create key.properties
-        run: |
-          echo "storePassword=${{ secrets.STORE_PASSWORD }}" > android/key.properties
-          echo "keyPassword=${{ secrets.STORE_PASSWORD }}" >> android/key.properties
-          echo "keyAlias=${{ secrets.KEY_ALIAS }}" >> android/key.properties
-          echo "storeFile=$(pwd)/keystore/release-key.jks" >> android/key.properties
-          
-      # Setup Google Services (Firebase Crashlytics, etc.)
+          if [ -n "$KEYSTORE_BASE64" ]; then
+            mkdir -p keystore
+            echo "$KEYSTORE_BASE64" | base64 -d > keystore/release-key.jks
+            KEY_PASS="${KEY_PASSWORD:-$STORE_PASSWORD}"
+            printf "storePassword=%s\nkeyPassword=%s\nkeyAlias=%s\nstoreFile=%s/keystore/release-key.jks\n" \
+              "$STORE_PASSWORD" "$KEY_PASS" "$KEY_ALIAS" "$(pwd)" > key.properties
+            cp key.properties android/key.properties
+            echo "Release keystore and key.properties configured."
+          else
+            echo "KEYSTORE_BASE64 secret not set, skipping."
+          fi
+
+      # 5. Setup Google Services (Firebase Crashlytics, etc.)
       - name: Setup Google Services
+        env:
+          GOOGLE_SERVICES_JSON: ${{ secrets.GOOGLE_SERVICES_JSON }}
         run: |
-          echo "${{ secrets.GOOGLE_SERVICES_JSON }}" | base64 -d > android/app/google-services.json
-#          echo "${{ secrets.GOOGLE_SERVICES_PLIST }}" | base64 -d > ios/Runner/GoogleService-Info.plist
-      
+          if [ -n "$GOOGLE_SERVICES_JSON" ]; then
+            mkdir -p android/app/src/standard
+            echo "$GOOGLE_SERVICES_JSON" | base64 -d > android/app/src/standard/google-services.json
+            cp android/app/src/standard/google-services.json android/app/google-services.json
+            echo "google-services.json configured."
+          else
+            echo "GOOGLE_SERVICES_JSON secret not set, skipping."
+          fi
+
       # Sanitize branch name for filenames
       - name: Prepare branch name
         run: |
@@ -49,13 +123,13 @@ jobs:
           SAFE=$(echo "$BRANCH" | tr '/ ' '-' | tr -cd '[:alnum.]._-')
           echo "BRANCH=$SAFE" >> $GITHUB_ENV
           echo "Using branch name: $SAFE"
-      
-      # Build both flavors (standard and foss)
+
+      # 6. Build both flavors (standard and foss)
       - name: Build APKs (standard + foss)
         run: |
           flutter build apk --release --flavor standard
           flutter build apk --release --flavor foss
-      
+
       - name: Rename APKs and create checksums
         run: |
           set -euo pipefail
@@ -81,6 +155,16 @@ jobs:
           # List generated files
           ls -lh grana-*.apk*
 
+      # 7. Upload to Firebase App Distribution
+      - name: Upload APK to Firebase App Distribution
+        uses: wzieba/Firebase-Distribution-Github-Action@v1
+        with:
+          appId: ${{ secrets.FIREBASE_APP_ID }}
+          serviceCredentialsFileContent: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_CREDENTIALS }}
+          groups: alpha-testers
+          file: grana-${{ env.BRANCH }}.apk
+          releaseNotes: "Release v${{ env.VERSION_NAME }} (build ${{ env.NEW_VERSION_CODE }}) - ${{ github.sha }}"
+
       # Upload both flavor APKs as artifacts
       - name: Upload APK artifacts
         uses: actions/upload-artifact@v4
@@ -98,7 +182,7 @@ jobs:
         run: |
           set -euo pipefail
           # Generate date-based tag (UTC)
-          TAG="v$(date -u +'%Y.%m.%d')"
+          TAG="v$(date -u +'%Y.%m.%d').${{ env.NEW_VERSION_CODE }}"
           echo "RELEASE_TAG=$TAG" >> "$GITHUB_ENV"
           echo "RELEASE_NAME=Grana $TAG" >> "$GITHUB_ENV"
           echo "Generated release tag: $TAG"
@@ -122,13 +206,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Deploy to Google Play Store
-      # - name: Deploy to Play Store (master)
-      #   if: github.ref_name == 'master'
-      #   uses: r0adkll/upload-google-play@v1
-      #   with:
-      #     serviceAccountJsonPlainText: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT }}
-      #     packageName: your.package.name
-      #     releaseFiles: build/app/outputs/flutter-apk/app-release.apk
-      #     track: internal # Or production, beta, alpha
-      #     status: completed # Or draft

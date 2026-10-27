@@ -53,3 +53,4 @@ keystore
 key.properties
 release-key.jks
 settings.local.json
+google-services.json

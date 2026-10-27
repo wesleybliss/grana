@@ -38,58 +38,55 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBI6-dz3FnJ_LwSnyD-6yAzYA9-kp2-cbM',
-    appId: '1:1021931476908:web:e5e20933f94c7474ef4c09',
-    messagingSenderId: '1021931476908',
-    projectId: 'grana-dc3f2',
-    authDomain: 'grana-dc3f2.firebaseapp.com',
-    storageBucket: 'grana-dc3f2.firebasestorage.app',
-    measurementId: 'G-SBQRL8HYL0',
+    apiKey: 'AIzaSyClr5qY9I0KjVLQnhABsXlsLKqFd5m5FJo',
+    appId: '1:1001367850451:web:038fc6743c4ffde075b326',
+    messagingSenderId: '1001367850451',
+    projectId: 'grana-e238b',
+    authDomain: 'grana-e238b.firebaseapp.com',
+    storageBucket: 'grana-e238b.firebasestorage.app',
+    measurementId: 'G-0WVQFNZKEY',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCrhH3FBqaGVC3ymhxRX_4_phmBAGJmkk0',
-    appId: '1:1021931476908:android:0ef35750044f283fef4c09',
-    messagingSenderId: '1021931476908',
-    projectId: 'grana-dc3f2',
-    storageBucket: 'grana-dc3f2.firebasestorage.app',
+    apiKey: 'AIzaSyB2_nWaVCBwxwl3CgCBzvsZ0BzJPoto2a8',
+    appId: '1:1001367850451:android:bea525abb82ed76d75b326',
+    messagingSenderId: '1001367850451',
+    projectId: 'grana-e238b',
+    storageBucket: 'grana-e238b.firebasestorage.app',
   );
-
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyA9qNE74cvBUNkhVWSrGLvyEzZdrVeaj6A',
-    appId: '1:1021931476908:ios:7fa06b741c70d6b3ef4c09',
-    messagingSenderId: '1021931476908',
-    projectId: 'grana-dc3f2',
-    storageBucket: 'grana-dc3f2.firebasestorage.app',
+    apiKey: 'AIzaSyDTQcTcBHEbuCcwp03chaBnt2dnoCUTxY4',
+    appId: '1:1001367850451:ios:927323f9ae22a58675b326',
+    messagingSenderId: '1001367850451',
+    projectId: 'grana-e238b',
+    storageBucket: 'grana-e238b.firebasestorage.app',
     iosBundleId: 'com.gammagamma.grana',
   );
-
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyA9qNE74cvBUNkhVWSrGLvyEzZdrVeaj6A',
-    appId: '1:1021931476908:ios:7fa06b741c70d6b3ef4c09',
-    messagingSenderId: '1021931476908',
-    projectId: 'grana-dc3f2',
-    storageBucket: 'grana-dc3f2.firebasestorage.app',
+    apiKey: 'AIzaSyDTQcTcBHEbuCcwp03chaBnt2dnoCUTxY4',
+    appId: '1:1001367850451:ios:927323f9ae22a58675b326',
+    messagingSenderId: '1001367850451',
+    projectId: 'grana-e238b',
+    storageBucket: 'grana-e238b.firebasestorage.app',
     iosBundleId: 'com.gammagamma.grana',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBI6-dz3FnJ_LwSnyD-6yAzYA9-kp2-cbM',
-    appId: '1:1021931476908:web:a6612e8198ba1be7ef4c09',
-    messagingSenderId: '1021931476908',
-    projectId: 'grana-dc3f2',
-    authDomain: 'grana-dc3f2.firebaseapp.com',
-    storageBucket: 'grana-dc3f2.firebasestorage.app',
-    measurementId: 'G-SC9BLB1FCB',
+    apiKey: 'AIzaSyClr5qY9I0KjVLQnhABsXlsLKqFd5m5FJo',
+    appId: '1:1001367850451:web:1cbeb4f8a4ff55f075b326',
+    messagingSenderId: '1001367850451',
+    projectId: 'grana-e238b',
+    authDomain: 'grana-e238b.firebaseapp.com',
+    storageBucket: 'grana-e238b.firebasestorage.app',
+    measurementId: 'G-CM186B6TZF',
   );
-
   static const FirebaseOptions linux = FirebaseOptions(
-    apiKey: 'AIzaSyBI6-dz3FnJ_LwSnyD-6yAzYA9-kp2-cbM',
-    appId: '1:1021931476908:web:e5e20933f94c7474ef4c09',
-    messagingSenderId: '1021931476908',
-    projectId: 'grana-dc3f2',
-    authDomain: 'grana-dc3f2.firebaseapp.com',
-    storageBucket: 'grana-dc3f2.firebasestorage.app',
-    measurementId: 'G-SBQRL8HYL0',
+    apiKey: 'AIzaSyClr5qY9I0KjVLQnhABsXlsLKqFd5m5FJo',
+    appId: '1:1001367850451:web:038fc6743c4ffde075b326',
+    messagingSenderId: '1001367850451',
+    projectId: 'grana-e238b',
+    authDomain: 'grana-e238b.firebaseapp.com',
+    storageBucket: 'grana-e238b.firebasestorage.app',
+    measurementId: 'G-0WVQFNZKEY',
   );
 }
