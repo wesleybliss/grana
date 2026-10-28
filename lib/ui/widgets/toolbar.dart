@@ -49,6 +49,7 @@ class Toolbar extends ConsumerWidget implements PreferredSizeWidget {
       title: Text(
         title,
         style: TextStyle(
+          fontFamily: 'BricolageGrotesque',
           color:
               Theme.of(context).textTheme.titleLarge?.color?.withAlpha(50) ??
               Colors.grey /*fontWeight: FontWeight.w800*/,
