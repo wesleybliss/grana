@@ -14,7 +14,7 @@ class Settings implements ISettings {
   @override
   int roundingDecimals = 2;
   @override
-  bool useLargeInputs = false;
+  bool useLargeInputs = true;
   @override
   bool showDragReorderHandles = true;
   @override
@@ -47,7 +47,7 @@ class Settings implements ISettings {
     this.lastUpdated,
     this.updateFrequencyInHours = 12,
     this.roundingDecimals = 2,
-    this.useLargeInputs = false,
+    this.useLargeInputs = true,
     this.showDragReorderHandles = true,
     this.showCopyToClipboardButtons = true,
     this.showFullCurrencyNameLabel = true,
@@ -125,10 +125,11 @@ class Settings implements ISettings {
           : null,
       updateFrequencyInHours: prefs.getInt(keys.updateFrequencyInHours) ?? 12,
       roundingDecimals: prefs.getInt(keys.roundingDecimals) ?? 4,
-      useLargeInputs: prefs.getInt(keys.useLargeInputs) == 1,
-      showDragReorderHandles: prefs.getInt(keys.showDragReorderHandles) == 1,
+      useLargeInputs: (prefs.getInt(keys.useLargeInputs) ?? 1) == 1,
+      showDragReorderHandles:
+          (prefs.getInt(keys.showDragReorderHandles) ?? 1) == 1,
       showCopyToClipboardButtons:
-          prefs.getInt(keys.showCopyToClipboardButtons) == 1,
+          (prefs.getInt(keys.showCopyToClipboardButtons) ?? 1) == 1,
       showFullCurrencyNameLabel:
           prefs.getInt(keys.showFullCurrencyNameLabel) == 1,
       inputsPosition: prefs.getString(keys.inputsPosition) ?? "center",

@@ -48,11 +48,7 @@ class Toolbar extends ConsumerWidget implements PreferredSizeWidget {
     return AppBar(
       title: Text(
         title,
-        style: TextStyle(
-          color:
-              Theme.of(context).textTheme.titleLarge?.color?.withAlpha(50) ??
-              Colors.grey /*fontWeight: FontWeight.w800*/,
-        ),
+        style: const TextStyle(fontFamily: 'BricolageGrotesque'),
       ),
       actions: actions,
       automaticallyImplyLeading: allowBackNavigation, // Prevent back button
