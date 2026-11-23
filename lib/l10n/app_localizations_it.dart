@@ -264,4 +264,84 @@ class AppLocalizationsIt extends AppLocalizations {
   @override
   String get currencyUpdateFailed =>
       'Errore nell\'aggiornamento dei dati valutari';
+
+  @override
+  String get scanPrices => 'Scansiona Prezzi';
+
+  @override
+  String get sourceCurrency => 'Valuta di Origine';
+
+  @override
+  String get autoDetectCurrency => 'Auto';
+
+  @override
+  String get pointCameraAtPrice => 'Inquadra un prezzo, un cartello o un menu';
+
+  @override
+  String get analyzingMenuWithAi => 'Analisi prezzi sul dispositivo...';
+
+  @override
+  String get useInConverter => 'Usa nel Convertitore';
+
+  @override
+  String get scanAgain => 'Fotocamera Live';
+
+  @override
+  String get captureAndAnalyze => 'Blocca e Analizza';
+
+  @override
+  String get pickFromGallery => 'Scegli foto';
+
+  @override
+  String get cameraPermissionRequired =>
+      'È necessario il permesso della fotocamera per scansionare i prezzi dal vivo. Puoi anche scegliere una foto dalla galleria.';
+
+  @override
+  String get noPricesDetectedYet =>
+      'Nessun prezzo rilevato. Inquadra un cartellino, blocca l\'immagine o scegli una foto.';
+
+  @override
+  String get aiBadgeGeminiNano => 'Gemini Nano 4';
+
+  @override
+  String get aiBadgeAppleIntelligence => 'Apple Intelligence';
+
+  @override
+  String get aiBadgeOnDeviceOcr => 'OCR Locale';
+
+  @override
+  String get downloadAiModel => 'Scarica IA';
+
+  @override
+  String get askPriceAgentHint =>
+      'Chiedi all\'IA locale (es. +15% mancia diviso 3)';
+
+  @override
+  String get tipTenPercent => '+10% Mancia';
+
+  @override
+  String get tipFifteenPercent => '+15% Mancia';
+
+  @override
+  String get splitTwoWays => 'Dividi ÷2';
+
+  @override
+  String get sumAllPrices => 'Somma Tutto';
+
+  @override
+  String get thousandsShorthandToggle => '×1.000';
+
+  @override
+  String get capturePhoto => 'Scatta Foto';
+
+  @override
+  String get retakePhoto => 'Ripeti';
+
+  @override
+  String get pointCameraAndCapture =>
+      'Inquadra un prezzo, un cartello o un menu, poi tocca Scatta Foto';
+
+  @override
+  String get noPricesFoundInPhoto =>
+      'Nessun prezzo trovato in questa foto. Prova a scattare più da vicino o scegli un\'altra foto.';
 }

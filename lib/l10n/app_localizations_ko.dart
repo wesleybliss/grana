@@ -243,4 +243,81 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get currencyUpdateFailed => '통화 데이터 업데이트 실패';
+
+  @override
+  String get scanPrices => '가격 스캔';
+
+  @override
+  String get sourceCurrency => '기준 통화';
+
+  @override
+  String get autoDetectCurrency => '자동';
+
+  @override
+  String get pointCameraAtPrice => '가격표, 표지판 또는 메뉴판을 비춰보세요';
+
+  @override
+  String get analyzingMenuWithAi => '온디바이스 AI로 가격 분석 중...';
+
+  @override
+  String get useInConverter => '환율 계산기에 적용';
+
+  @override
+  String get scanAgain => '실시간 카메라';
+
+  @override
+  String get captureAndAnalyze => '화면 고정 및 AI 스캔';
+
+  @override
+  String get pickFromGallery => '사진 선택';
+
+  @override
+  String get cameraPermissionRequired =>
+      '실시간 가격 스캔을 위해 카메라 권한이 필요합니다. 갤러리에서 사진을 선택할 수도 있습니다.';
+
+  @override
+  String get noPricesDetectedYet => '아직 감지된 가격이 없습니다. 가격표를 비추거나 사진을 촬영해 보세요.';
+
+  @override
+  String get aiBadgeGeminiNano => 'Gemini Nano 4';
+
+  @override
+  String get aiBadgeAppleIntelligence => 'Apple Intelligence';
+
+  @override
+  String get aiBadgeOnDeviceOcr => '온디바이스 OCR';
+
+  @override
+  String get downloadAiModel => 'AI 다운로드';
+
+  @override
+  String get askPriceAgentHint => '온디바이스 AI 질문 (예: 팁 15% 추가 후 3명 더치페이)';
+
+  @override
+  String get tipTenPercent => '+10% 팁';
+
+  @override
+  String get tipFifteenPercent => '+15% 팁';
+
+  @override
+  String get splitTwoWays => '÷2 더치페이';
+
+  @override
+  String get sumAllPrices => '전체 합계';
+
+  @override
+  String get thousandsShorthandToggle => '×1,000';
+
+  @override
+  String get capturePhoto => '사진 촬영';
+
+  @override
+  String get retakePhoto => '다시 찍기';
+
+  @override
+  String get pointCameraAndCapture => '가격표, 표지판 또는 메뉴판을 맞춘 뒤 사진 촬영을 누르세요';
+
+  @override
+  String get noPricesFoundInPhoto =>
+      '사진에서 가격을 찾지 못했습니다. 더 가까이에서 다시 찍거나 다른 사진을 선택해 보세요.';
 }

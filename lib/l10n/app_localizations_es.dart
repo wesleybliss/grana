@@ -264,4 +264,85 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get currencyUpdateFailed => 'Error al actualizar datos de divisas';
+
+  @override
+  String get scanPrices => 'Escanear Precios';
+
+  @override
+  String get sourceCurrency => 'Moneda de Origen';
+
+  @override
+  String get autoDetectCurrency => 'Auto';
+
+  @override
+  String get pointCameraAtPrice =>
+      'Apunta la cámara a un precio, cartel o menú';
+
+  @override
+  String get analyzingMenuWithAi => 'Analizando precios en el dispositivo...';
+
+  @override
+  String get useInConverter => 'Usar en Convertidor';
+
+  @override
+  String get scanAgain => 'Cámara en Vivo';
+
+  @override
+  String get captureAndAnalyze => 'Capturar y Analizar';
+
+  @override
+  String get pickFromGallery => 'Elegir foto';
+
+  @override
+  String get cameraPermissionRequired =>
+      'Se requiere permiso de cámara para escanear precios en vivo. También puedes elegir una foto de tu galería.';
+
+  @override
+  String get noPricesDetectedYet =>
+      'Aún no se detectaron precios. Apunta a una etiqueta, captura la imagen o elige una foto.';
+
+  @override
+  String get aiBadgeGeminiNano => 'Gemini Nano 4';
+
+  @override
+  String get aiBadgeAppleIntelligence => 'Apple Intelligence';
+
+  @override
+  String get aiBadgeOnDeviceOcr => 'OCR Local';
+
+  @override
+  String get downloadAiModel => 'Descargar IA';
+
+  @override
+  String get askPriceAgentHint =>
+      'Pregunta a la IA local (ej. +15% propina entre 3)';
+
+  @override
+  String get tipTenPercent => '+10% Propina';
+
+  @override
+  String get tipFifteenPercent => '+15% Propina';
+
+  @override
+  String get splitTwoWays => 'Dividir ÷2';
+
+  @override
+  String get sumAllPrices => 'Sumar Todo';
+
+  @override
+  String get thousandsShorthandToggle => '×1.000';
+
+  @override
+  String get capturePhoto => 'Tomar Foto';
+
+  @override
+  String get retakePhoto => 'Repetir';
+
+  @override
+  String get pointCameraAndCapture =>
+      'Enfoca un precio, cartel o menú y toca Tomar Foto';
+
+  @override
+  String get noPricesFoundInPhoto =>
+      'No se encontraron precios en esta foto. Intenta acercarte más o elegir otra foto.';
 }

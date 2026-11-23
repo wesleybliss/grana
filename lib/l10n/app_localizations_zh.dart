@@ -242,4 +242,79 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get currencyUpdateFailed => '更新货币数据失败';
+
+  @override
+  String get scanPrices => '扫描价格';
+
+  @override
+  String get sourceCurrency => '原始货币';
+
+  @override
+  String get autoDetectCurrency => '自动';
+
+  @override
+  String get pointCameraAtPrice => '将相机对准价格标签、招牌或菜单';
+
+  @override
+  String get analyzingMenuWithAi => '正在端侧分析价格...';
+
+  @override
+  String get useInConverter => '填入换算器';
+
+  @override
+  String get scanAgain => '实时相机';
+
+  @override
+  String get captureAndAnalyze => '定格智能识别';
+
+  @override
+  String get pickFromGallery => '选择照片';
+
+  @override
+  String get cameraPermissionRequired => '实时扫描价格需要相机权限，您也可以从相册选择照片。';
+
+  @override
+  String get noPricesDetectedYet => '暂未检测到价格。请对准价签、点击定格识别或选择照片。';
+
+  @override
+  String get aiBadgeGeminiNano => 'Gemini Nano 4';
+
+  @override
+  String get aiBadgeAppleIntelligence => 'Apple Intelligence';
+
+  @override
+  String get aiBadgeOnDeviceOcr => '本地 OCR';
+
+  @override
+  String get downloadAiModel => '下载 AI';
+
+  @override
+  String get askPriceAgentHint => '向端侧 AI 提问（如：加 15% 小费并 3 人平摊）';
+
+  @override
+  String get tipTenPercent => '+10% 小费';
+
+  @override
+  String get tipFifteenPercent => '+15% 小费';
+
+  @override
+  String get splitTwoWays => '÷2 平摊';
+
+  @override
+  String get sumAllPrices => '全部求和';
+
+  @override
+  String get thousandsShorthandToggle => '×1,000';
+
+  @override
+  String get capturePhoto => '拍照扫描';
+
+  @override
+  String get retakePhoto => '重拍';
+
+  @override
+  String get pointCameraAndCapture => '将镜头对准价格标签、招牌或菜单，然后点击拍照扫描';
+
+  @override
+  String get noPricesFoundInPhoto => '未在照片中识别到价格。请靠近重拍或选择其他照片。';
 }

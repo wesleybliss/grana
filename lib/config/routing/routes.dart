@@ -20,6 +20,7 @@ class Routes {
   static const String inflationHelp = '/settings/inflation-help';
   static const String currencies = '/currencies';
   static const String units = '/units';
+  static const String scanner = '/scanner';
 
   static Function defineDefault(FluroRouter router) =>
       (
@@ -61,5 +62,6 @@ class Routes {
     define(inflationHelp, inflationHelpHandler, TransitionType.fadeIn);
     define(currencies, currenciesHandler, TransitionType.fadeIn);
     define(units, unitsHandler, TransitionType.fadeIn);
+    define(scanner, scannerHandler, TransitionType.materialFullScreenDialog);
   }
 }

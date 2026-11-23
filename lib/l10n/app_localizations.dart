@@ -571,6 +571,156 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Failed to update currency data'**
   String get currencyUpdateFailed;
+
+  /// No description provided for @scanPrices.
+  ///
+  /// In en, this message translates to:
+  /// **'Scan Prices'**
+  String get scanPrices;
+
+  /// No description provided for @sourceCurrency.
+  ///
+  /// In en, this message translates to:
+  /// **'Source Currency'**
+  String get sourceCurrency;
+
+  /// No description provided for @autoDetectCurrency.
+  ///
+  /// In en, this message translates to:
+  /// **'Auto'**
+  String get autoDetectCurrency;
+
+  /// No description provided for @pointCameraAtPrice.
+  ///
+  /// In en, this message translates to:
+  /// **'Point camera at a price, sign, or menu'**
+  String get pointCameraAtPrice;
+
+  /// No description provided for @analyzingMenuWithAi.
+  ///
+  /// In en, this message translates to:
+  /// **'Analyzing prices on-device...'**
+  String get analyzingMenuWithAi;
+
+  /// No description provided for @useInConverter.
+  ///
+  /// In en, this message translates to:
+  /// **'Use in Converter'**
+  String get useInConverter;
+
+  /// No description provided for @scanAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Live Camera'**
+  String get scanAgain;
+
+  /// No description provided for @captureAndAnalyze.
+  ///
+  /// In en, this message translates to:
+  /// **'Freeze & Smart Scan'**
+  String get captureAndAnalyze;
+
+  /// No description provided for @pickFromGallery.
+  ///
+  /// In en, this message translates to:
+  /// **'Pick photo'**
+  String get pickFromGallery;
+
+  /// No description provided for @cameraPermissionRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Camera permission is needed to scan prices in real time. You can also pick a photo from your gallery.'**
+  String get cameraPermissionRequired;
+
+  /// No description provided for @noPricesDetectedYet.
+  ///
+  /// In en, this message translates to:
+  /// **'No prices detected yet. Point at a price tag, tap Freeze, or choose a photo.'**
+  String get noPricesDetectedYet;
+
+  /// No description provided for @aiBadgeGeminiNano.
+  ///
+  /// In en, this message translates to:
+  /// **'Gemini Nano 4'**
+  String get aiBadgeGeminiNano;
+
+  /// No description provided for @aiBadgeAppleIntelligence.
+  ///
+  /// In en, this message translates to:
+  /// **'Apple Intelligence'**
+  String get aiBadgeAppleIntelligence;
+
+  /// No description provided for @aiBadgeOnDeviceOcr.
+  ///
+  /// In en, this message translates to:
+  /// **'On-Device OCR'**
+  String get aiBadgeOnDeviceOcr;
+
+  /// No description provided for @downloadAiModel.
+  ///
+  /// In en, this message translates to:
+  /// **'Download AI'**
+  String get downloadAiModel;
+
+  /// No description provided for @askPriceAgentHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask on-device AI (e.g. +15% tip split 3 ways)'**
+  String get askPriceAgentHint;
+
+  /// No description provided for @tipTenPercent.
+  ///
+  /// In en, this message translates to:
+  /// **'+10% Tip'**
+  String get tipTenPercent;
+
+  /// No description provided for @tipFifteenPercent.
+  ///
+  /// In en, this message translates to:
+  /// **'+15% Tip'**
+  String get tipFifteenPercent;
+
+  /// No description provided for @splitTwoWays.
+  ///
+  /// In en, this message translates to:
+  /// **'Split ÷2'**
+  String get splitTwoWays;
+
+  /// No description provided for @sumAllPrices.
+  ///
+  /// In en, this message translates to:
+  /// **'Sum All'**
+  String get sumAllPrices;
+
+  /// No description provided for @thousandsShorthandToggle.
+  ///
+  /// In en, this message translates to:
+  /// **'×1,000'**
+  String get thousandsShorthandToggle;
+
+  /// No description provided for @capturePhoto.
+  ///
+  /// In en, this message translates to:
+  /// **'Take Photo'**
+  String get capturePhoto;
+
+  /// No description provided for @retakePhoto.
+  ///
+  /// In en, this message translates to:
+  /// **'Retake'**
+  String get retakePhoto;
+
+  /// No description provided for @pointCameraAndCapture.
+  ///
+  /// In en, this message translates to:
+  /// **'Frame a price, sign, or menu, then tap Take Photo'**
+  String get pointCameraAndCapture;
+
+  /// No description provided for @noPricesFoundInPhoto.
+  ///
+  /// In en, this message translates to:
+  /// **'No prices found in this photo. Try retaking closer or picking another photo.'**
+  String get noPricesFoundInPhoto;
 }
 
 class _AppLocalizationsDelegate

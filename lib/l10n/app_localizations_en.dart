@@ -258,4 +258,84 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get currencyUpdateFailed => 'Failed to update currency data';
+
+  @override
+  String get scanPrices => 'Scan Prices';
+
+  @override
+  String get sourceCurrency => 'Source Currency';
+
+  @override
+  String get autoDetectCurrency => 'Auto';
+
+  @override
+  String get pointCameraAtPrice => 'Point camera at a price, sign, or menu';
+
+  @override
+  String get analyzingMenuWithAi => 'Analyzing prices on-device...';
+
+  @override
+  String get useInConverter => 'Use in Converter';
+
+  @override
+  String get scanAgain => 'Live Camera';
+
+  @override
+  String get captureAndAnalyze => 'Freeze & Smart Scan';
+
+  @override
+  String get pickFromGallery => 'Pick photo';
+
+  @override
+  String get cameraPermissionRequired =>
+      'Camera permission is needed to scan prices in real time. You can also pick a photo from your gallery.';
+
+  @override
+  String get noPricesDetectedYet =>
+      'No prices detected yet. Point at a price tag, tap Freeze, or choose a photo.';
+
+  @override
+  String get aiBadgeGeminiNano => 'Gemini Nano 4';
+
+  @override
+  String get aiBadgeAppleIntelligence => 'Apple Intelligence';
+
+  @override
+  String get aiBadgeOnDeviceOcr => 'On-Device OCR';
+
+  @override
+  String get downloadAiModel => 'Download AI';
+
+  @override
+  String get askPriceAgentHint =>
+      'Ask on-device AI (e.g. +15% tip split 3 ways)';
+
+  @override
+  String get tipTenPercent => '+10% Tip';
+
+  @override
+  String get tipFifteenPercent => '+15% Tip';
+
+  @override
+  String get splitTwoWays => 'Split ÷2';
+
+  @override
+  String get sumAllPrices => 'Sum All';
+
+  @override
+  String get thousandsShorthandToggle => '×1,000';
+
+  @override
+  String get capturePhoto => 'Take Photo';
+
+  @override
+  String get retakePhoto => 'Retake';
+
+  @override
+  String get pointCameraAndCapture =>
+      'Frame a price, sign, or menu, then tap Take Photo';
+
+  @override
+  String get noPricesFoundInPhoto =>
+      'No prices found in this photo. Try retaking closer or picking another photo.';
 }

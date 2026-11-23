@@ -2,6 +2,7 @@ import 'package:grana/db/database.dart';
 import 'package:grana/domain/di/providers/currencies/currencies_provider.dart';
 import 'package:grana/domain/di/providers/currencies/currency_values_provider.dart';
 import 'package:grana/domain/di/providers/currencies/sorted_currencies_provider.dart';
+import 'package:grana/domain/di/providers/settings/settings_provider.dart';
 import 'package:grana/utils/currency_locales.dart';
 import 'package:grana/utils/logger.dart';
 import 'package:flutter/foundation.dart';
@@ -241,6 +242,43 @@ class CurrencyInputsListViewModel
     for (int i = 0; i < reordered.length; i++) {
       final updatedCurrency = reordered[i].copyWith(order: i);
       ref.read(currenciesProvider.notifier).setCurrency(updatedCurrency);
+    }
+  }
+
+  /// Applies a scanned [exactAmount] in [sourceSymbol] directly to the Home
+  /// currency inputs without triggering focus-change resets or double inflation.
+  void applyScannedPrice(String sourceSymbol, double exactAmount) {
+    final sortedCurrencies = ref.read(sortedCurrenciesProvider);
+    if (sortedCurrencies.isEmpty) return;
+
+    _syncControllers(sortedCurrencies);
+
+    final targetFocusSymbol = sortedCurrencies.any((c) => c.symbol == sourceSymbol)
+        ? sourceSymbol
+        : sortedCurrencies.first.symbol;
+
+    // Set focused symbol first so focus listener does not wipe values
+    ref.read(focusedCurrencyInputSymbolProvider.notifier).setSymbol(
+      targetFocusSymbol,
+    );
+
+    final updatedValues = ref
+        .read(currencyValuesProvider.notifier)
+        .setExactScannedAmount(sourceSymbol, exactAmount);
+
+    final allowDecimal =
+        ref.read(settingsNotifierProvider).value?.allowDecimalInput ?? true;
+
+    for (final entry in updatedValues.entries) {
+      final controller = _controllers[entry.key];
+      if (controller != null) {
+        final hasFraction = (entry.value - entry.value.truncateToDouble()).abs() > 0.001;
+        controller.text = _formatCurrencyWithSettings(
+          entry.key,
+          entry.value,
+          allowDecimal || hasFraction,
+        );
+      }
     }
   }
 }
