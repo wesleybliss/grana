@@ -96,6 +96,46 @@ Map<String, double> convertCurrencies(
   return updatedValues;
 }
 
+/// Converts an exact resolved numeric [amount] from [sourceSymbol] (looked up in
+/// [allCurrencies], even if not pinned in [targetCurrencies]) into every currency
+/// in [targetCurrencies] without applying manual-typing inflation multipliers.
+Map<String, double> convertFromAnyCurrency({
+  required String sourceSymbol,
+  required double amount,
+  required List<Currency> targetCurrencies,
+  required List<Currency> allCurrencies,
+  int roundingDecimals = 2,
+}) {
+  if (targetCurrencies.isEmpty) return const {};
+
+  double sourceRate = 1.0;
+  if (sourceSymbol != 'USD') {
+    final match = allCurrencies.where((c) => c.symbol == sourceSymbol);
+    if (match.isNotEmpty && match.first.rate > 0) {
+      sourceRate = match.first.rate;
+    } else {
+      final targetMatch = targetCurrencies.where((c) => c.symbol == sourceSymbol);
+      if (targetMatch.isNotEmpty && targetMatch.first.rate > 0) {
+        sourceRate = targetMatch.first.rate;
+      } else {
+        return const {};
+      }
+    }
+  }
+
+  final valueInUsd = sourceSymbol == 'USD' ? amount : amount / sourceRate;
+  final Map<String, double> converted = {};
+
+  for (final target in targetCurrencies) {
+    final raw = target.symbol == 'USD' ? valueInUsd : valueInUsd * target.rate;
+    converted[target.symbol] = double.parse(
+      raw.toStringAsFixed(roundingDecimals),
+    );
+  }
+
+  return converted;
+}
+
 String removeAllButLastDecimal(String text) {
   // Define possible decimal separators
   const separators = {'.', ','};

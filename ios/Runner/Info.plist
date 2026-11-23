@@ -47,5 +47,11 @@
 		<true/>
 		<key>UIStatusBarHidden</key>
 		<false/>
+		<key>NSCameraUsageDescription</key>
+		<string>Grana uses the camera to scan prices on menus, signs, and tags and convert them on-device.</string>
+		<key>NSPhotoLibraryUsageDescription</key>
+		<string>Grana accesses selected photos to detect and convert prices on-device.</string>
+		<key>NSLocationWhenInUseUsageDescription</key>
+		<string>Grana uses your approximate location to automatically select the local currency when scanning prices.</string>
 	</dict>
 </plist>

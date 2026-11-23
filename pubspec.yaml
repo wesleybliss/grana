@@ -93,6 +93,10 @@ dependencies:
   # SVG Country Flags (more stable than emojis)
   country_flags: ^4.1.2
 
+  # Camera & gallery image selection for price scanning
+  camera: ^0.12.2
+  image_picker: ^1.1.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

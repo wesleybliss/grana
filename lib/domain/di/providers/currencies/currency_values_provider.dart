@@ -98,6 +98,32 @@ class CurrencyValuesNotifier extends StateNotifier<Map<String, double>> {
       accountForInflation: false,
     );
   }
+
+  /// Populates converter values from an exact scanned price (in [sourceSymbol]),
+  /// supporting both pinned and non-pinned world currencies without re-applying
+  /// the manual typing inflation multiplier.
+  Map<String, double> setExactScannedAmount(
+    String sourceSymbol,
+    double exactAmount,
+  ) {
+    final sortedCurrencies = ref.read(sortedCurrenciesProvider);
+    final allCurrencies = ref.read(currenciesProvider).currencies;
+    final settings = ref.read(settingsNotifierProvider).value;
+    if (sortedCurrencies.isEmpty) return state;
+
+    final converted = convertFromAnyCurrency(
+      sourceSymbol: sourceSymbol,
+      amount: exactAmount,
+      targetCurrencies: sortedCurrencies,
+      allCurrencies: allCurrencies,
+      roundingDecimals: settings?.roundingDecimals ?? 2,
+    );
+
+    if (converted.isNotEmpty) {
+      state = converted;
+    }
+    return state;
+  }
 }
 
 final currencyValuesProvider =
